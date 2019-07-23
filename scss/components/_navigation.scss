@@ -1,3 +1,34 @@
 /* =============
     Navigation
 ============= */
+nav {
+    background-color: $sunflower;
+    padding: 10px;
+    @include lg {
+        background-color: $white;
+    }
+
+    ul {
+        @include lg {
+            align-items: center;
+            display: flex;
+            height: 100%;
+        }
+
+        li {
+            margin-bottom: 15px;
+            @include lg {
+                margin-bottom: 0;
+                margin-left: 20px;
+            }
+
+            a:link,
+            a:visited {
+                color: $black;
+            }
+        }
+        li:last-child{
+            margin-bottom: 0;
+        }
+    }
+}
