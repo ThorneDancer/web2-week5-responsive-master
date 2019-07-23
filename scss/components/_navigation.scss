@@ -1,34 +1,50 @@
 /* =============
     Navigation
 ============= */
-nav {
-    background-color: $sunflower;
-    padding: 10px;
-    @include lg {
-        background-color: $white;
-    }
-
-    ul {
+header{
+    nav {
+        background-color: $charcoal;
+        padding: 10px;
         @include lg {
-            align-items: center;
-            display: flex;
-            height: 100%;
+            background-color: $white;
         }
 
-        li {
-            margin-bottom: 15px;
+        ul {
             @include lg {
-                margin-bottom: 0;
-                margin-left: 20px;
+                align-items: center;
+                display: flex;
+                height: 100%;
             }
 
-            a:link,
-            a:visited {
-                color: $black;
+            li {
+                margin-bottom: 15px;
+                padding-bottom: 5px;
+                border-bottom: $sunflower 1px solid;
+                @include lg {
+                    margin-bottom: 0;
+                    margin-left: 20px;
+                    border-bottom: none;
+                    border-right: $black 1px solid;
+                    padding-right: 20px;
+                    padding-bottom: 0;
+                }
+
+                a:link,
+                a:visited {
+                    color: $white;
+                    @include lg{
+                        color: $black;
+                    }
+                }
             }
-        }
-        li:last-child{
-            margin-bottom: 0;
+
+            li:last-child{
+                margin-bottom: 5px;
+                @include lg{
+                    margin-bottom: 0;
+                    border: none;
+                }
+            }
         }
     }
 }

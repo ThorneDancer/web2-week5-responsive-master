@@ -378,39 +378,57 @@ textarea {
 /* =============
     Navigation
 ============= */
-nav {
-  background-color: #F8C832;
+header nav {
+  background-color: #222222;
   padding: 10px; }
   @media (min-width: 980px) {
-    nav {
+    header nav {
       background-color: #fff; } }
   @media (min-width: 980px) {
-    nav ul {
+    header nav ul {
       align-items: center;
       display: flex;
       height: 100%; } }
-  nav ul li {
-    margin-bottom: 15px; }
+  header nav ul li {
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: #F8C832 1px solid; }
     @media (min-width: 980px) {
-      nav ul li {
+      header nav ul li {
         margin-bottom: 0;
-        margin-left: 20px; } }
-    nav ul li a:link,
-    nav ul li a:visited {
-      color: #000; }
-  nav ul li:last-child {
-    margin-bottom: 0; }
+        margin-left: 20px;
+        border-bottom: none;
+        border-right: #000 1px solid;
+        padding-right: 20px;
+        padding-bottom: 0; } }
+    header nav ul li a:link,
+    header nav ul li a:visited {
+      color: #fff; }
+      @media (min-width: 980px) {
+        header nav ul li a:link,
+        header nav ul li a:visited {
+          color: #000; } }
+  header nav ul li:last-child {
+    margin-bottom: 5px; }
+    @media (min-width: 980px) {
+      header nav ul li:last-child {
+        margin-bottom: 0;
+        border: none; } }
 
 /* =============
     Header
 ============= */
 header {
   display: grid;
-  grid-template-areas: "burger logo" "nav nav";
-  grid-template-columns: auto 70%; }
+  grid-template-areas: "burger shopping" "nav nav";
+  grid-template-columns: auto 70%;
+  position: fixed;
+  background-color: #fff;
+  width: 100%;
+  top: 0; }
   @media (min-width: 980px) {
     header {
-      grid-template-areas: "nav logo";
+      grid-template-areas: "nav shopping";
       grid-template-columns: auto 40%; } }
   header section:nth-child(1) {
     display: flex;
@@ -427,10 +445,16 @@ header {
       border: none;
       outline: none; }
   header section:nth-child(2) {
-    grid-area: logo;
+    grid-area: shopping;
     margin: 10px;
     display: flex;
     justify-content: flex-end; }
+    header section:nth-child(2) span {
+      display: none;
+      padding-left: 10px; }
+      @media (min-width: 585px) {
+        header section:nth-child(2) span {
+          display: inline-block; } }
     header section:nth-child(2) a:link,
     header section:nth-child(2) a:visited {
       background-color: #F8C832;
@@ -442,10 +466,10 @@ header {
       padding: 13px 25px; }
     header section:nth-child(2) a:active,
     header section:nth-child(2) a:hover {
-      background-color: #F8C832;
+      background-color: #000;
       color: #fff; }
   header nav {
-    display: none;
+    display: none !important;
     grid-area: nav; }
     @media (min-width: 980px) {
       header nav {
@@ -487,7 +511,8 @@ footer {
   height: 358px;
   background-image: url("../img/hero/hero.jpg");
   background-size: cover;
-  background-position: -100px 0; }
+  background-position: -100px 0;
+  margin-top: 66px; }
   @media (min-width: 585px) {
     #hero {
       height: 400px; } }
