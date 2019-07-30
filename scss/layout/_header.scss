@@ -3,18 +3,31 @@
 ============= */
 header {
     display: grid;
-    grid-template-columns: 20% auto;
-    padding: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    background-color: $white;
+    // padding: 10px;
 
-    nav {
-        i {
-            font-size: rem-calc(30);
-            margin-top: 8px;
-        }
+    // nav {
+    //     i {
+    //         font-size: rem-calc(30);
+    //         margin-top: 8px;
+    //     }
+    // }
+
+    section{
+        padding: 0 10px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        font-size: rem-calc(24);
     }
 
     aside {
         text-align: right;
+        padding: 10px;
 
         a:link,
         a:visited {
@@ -29,7 +42,7 @@ header {
 
         a:active,
         a:hover {
-            background-color: $sunflower;
+            background-color: $black;
             color: $white;
         }
     }

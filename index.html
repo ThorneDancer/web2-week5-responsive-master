@@ -16,15 +16,55 @@
 
 <body>
 
+    <!-- Your options for data-navigation-position is: left | right -->
+    <!-- Your options for data-navigation-slide is: over | under | push -->
+    <section id="off-canvas-container" data-navigation-position="left" data-navigation-slide="over">
+        <div>
+            <button>
+                <i class="far fa-times-circle" id="close-btn"></i>
+            </button>
+            <div id="nav-container">
+                <nav data-nav="main-navigation">
+
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- The header needs to be outside of the main tag if you are going to position fix it. -->
+    <header data-fixed="fixed-item">
+            <!-- burger icon -->
+            <section>
+                <button id="burger-icon">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+            </section>
+
+            <aside>
+                <a href="#">Survival Guide</a>
+            </aside>
+    </header>
+
     <main>
-        <header>
+
+        <!-- <header>
             <nav>
                 <i class="fas fa-bars"></i>
             </nav>
             <aside>
                 <a href="#">Survival Guide</a>
             </aside>
-        </header>
+        </header> -->
+
+        <!-- overlay for the view when the menu is visible. Please don't move -->
+        <div class="js-off-canvas-overlay" id="overlay"></div>
+        <!-- overlay for the view when the menu is visible. Please don't move -->
 
         <section id="hero"></section>
 
@@ -36,14 +76,18 @@
                     <h1>Early History of</h1>
                     <h1>Machine Learning</h1>
                     <h4>by Professor Karen Pine</h4>
-                    <p>The first case of neural networks was in 1943, when neurophysiologist Warren McCulloch and mathematician Walter Pitts wrote a paper about neurons, and how they work. They decided to create a model of this using an electrical circuit, and therefore the neural network was born.</p>
-                    <p>Another extremely early instance of a neural network came in 1959, when Bernard Widrow and Marcian Hoff created two models of them at Stanford University. The first was called ADELINE, and it could detect binary patterns. For example, in a stream of bits, it could predict what the next one would be. The next generation was called MADELINE, and it could eliminate echo on phone lines, so had a useful real world application. It is still in use today.</p>
+                    <p>The first case of neural networks was in 1943, when neurophysiologist Warren McCulloch and mathematician Walter Pitts wrote a paper about neurons, and how they work. They decided to create a model of this using an electrical
+                        circuit, and therefore the neural network was born.</p>
+                    <p>Another extremely early instance of a neural network came in 1959, when Bernard Widrow and Marcian Hoff created two models of them at Stanford University. The first was called ADELINE, and it could detect binary patterns. For
+                        example, in a stream of bits, it could predict what the next one would be. The next generation was called MADELINE, and it could eliminate echo on phone lines, so had a useful real world application. It is still in use today.
+                    </p>
                 </article>
 
                 <article>
                     <div>
                         <h3>1980s and 1990s</h3>
-                        <p>1982 was the year in which interest in neural networks started to pick up again, when John Hopfield suggested creating a network which had bidirectional lines, similar to how neurons actually work. Furthermore, in 1982, Japan announced it was focusing on more advanced neural networks, which incentivised American funding into the area, and thus created more research in the area.</p>
+                        <p>1982 was the year in which interest in neural networks started to pick up again, when John Hopfield suggested creating a network which had bidirectional lines, similar to how neurons actually work. Furthermore, in 1982,
+                            Japan announced it was focusing on more advanced neural networks, which incentivised American funding into the area, and thus created more research in the area.</p>
                     </div>
                 </article>
             </div>
@@ -56,7 +100,8 @@
                 <section class="content-grid">
                     <div>
                         <h1>Robot Skills</h1>
-                        <p>To be effective as both specialists and generalists — as well as being both practical and investigative — roboticists need a good set of supporting skills. In this list we've taken 25 career skills and grouped them into 10 essential skills for roboticists.</p>
+                        <p>To be effective as both specialists and generalists — as well as being both practical and investigative — roboticists need a good set of supporting skills. In this list we've taken 25 career skills and grouped them into 10
+                            essential skills for roboticists.</p>
 
                         <article>
                             <section>
